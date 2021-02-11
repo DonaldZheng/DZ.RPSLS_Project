@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 namespace DZ.RPSLS
 {
     class Battlefield
-    {   
+    {
         //member variables (HAS A)
+        int playerOneScore;
+        int playerTwoScore;
 
         //constructor
         public Battlefield()
@@ -38,7 +40,19 @@ namespace DZ.RPSLS
             Console.WriteLine("Spock vaporizes Rock");
         }
 
+        public void PlayerOneName()
+        {
+            Console.WriteLine("Player One: Enter Your name" );
+            string userInputPlayerOne = Console.ReadLine();
+            PlayerOne.
+        }
 
+        public void PlayerTwoName()
+        {
+            Console.WriteLine("Player Two: Enter Your Name!");
+            string userInputPlayerTwo = Console.ReadLine();
+
+        }
 
 
 

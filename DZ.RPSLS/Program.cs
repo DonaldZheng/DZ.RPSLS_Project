@@ -10,6 +10,9 @@ namespace DZ.RPSLS
     {
         static void Main(string[] args)
         {
+            Battlefield battlefield = new Battlefield();
+            battlefield.DisplayRules();
+            Console.ReadLine();
         }
     }
 }

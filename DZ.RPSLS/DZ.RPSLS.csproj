@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="Battlefield.cs" />
     <Compile Include="Gestures.cs" />
+    <Compile Include="Mulitiplayer.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="PlayerOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
