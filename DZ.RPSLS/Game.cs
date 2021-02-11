@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    class Battlefield
+    class Game
     {
         //member variables (HAS A)
-        int playerOneScore;
-        int playerTwoScore;
+        Player playerOne;
+        Player playerTwo;
 
         //constructor
-        public Battlefield()
+        public Game()
         {
 
         }

@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    class Player
+    public class Player
     {
         //member variables (HAS A)
         public string name;
         public int score;
-        public int choice;
+        public string gestureChoice;
+        public List<string> gestures;
 
         //constructor
-        public Player(string name, int score, int choice)
+        public Player()
         {
-            this.name = name;
-            score = 0;
-            this.choice = choice;
+            gestures = new List<string>();
+            
         }
 
         //member methods (CAN DO)
+        public void playerChoice()
+        {
+        
+        }
     }
 }

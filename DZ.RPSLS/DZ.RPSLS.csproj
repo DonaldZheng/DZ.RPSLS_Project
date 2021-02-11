@@ -43,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Battlefield.cs" />
-    <Compile Include="Gestures.cs" />
-    <Compile Include="Mulitiplayer.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="ComputerAI.cs" />
+    <Compile Include="Human.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerOne.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

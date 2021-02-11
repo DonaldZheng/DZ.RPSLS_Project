@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    class Gestures
+    public class Human: Player
     {
         //member variables (HAS A)
 
         //constructor
+        public Human(string name, int score, string gestureChoice)
+        {
+            this.name = "Donald";
+            score = 0;
+            this.gestureChoice = gestureChoice;
+        }
 
         //member methods (CAN DO)
     }
