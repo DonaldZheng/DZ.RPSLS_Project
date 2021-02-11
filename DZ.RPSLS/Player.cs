@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    class Scissors
+    class Player
     {
         //member variables (HAS A)
 

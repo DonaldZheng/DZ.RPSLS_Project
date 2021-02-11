@@ -7,19 +7,7 @@ using System.Threading.Tasks;
 namespace DZ.RPSLS
 {
     class Battlefield
-    {   //Scissors cuts paper 
-        //Rock crushes Scissors  
-        //Scissors cuts Paper
-        //Paper covers Rock
-        //Rock crushes Lizard
-        //Lizard poisons Spock
-        //Spock smashes Scissors
-        //Scissors decapitates Lizard
-        //Lizard eats Paper
-        //Paper disproves Spock
-        //Spock vaporizes Rock
-
-
+    {   
         //member variables (HAS A)
 
         //constructor
@@ -38,6 +26,16 @@ namespace DZ.RPSLS
         {
             Console.WriteLine("You will choose Rock, Paper, Scissors, Lizard, or Spock. " +
                 "First to 3 Points will be declared the winner. Each rounds is worth one point");
+            Console.WriteLine("Rock crushes Scissors");
+            Console.WriteLine("Scissors cuts Paper");
+            Console.WriteLine("Paper covers Rock");
+            Console.WriteLine("Rock crushes Lizard");
+            Console.WriteLine("Lizard poisons Spock");
+            Console.WriteLine("Spock smashes Scissors");
+            Console.WriteLine("Scissors decapitates Lizard");
+            Console.WriteLine("Lizard eats Paper");
+            Console.WriteLine("Paper disproves Spock");
+            Console.WriteLine("Spock vaporizes Rock");
         }
 
 
