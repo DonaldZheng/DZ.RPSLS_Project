@@ -22,7 +22,7 @@ namespace DZ.RPSLS
         }
 
         //member methods (CAN DO)
-        public void playerChoice()
+        public void PlayerChoice()
         {
         
         }
