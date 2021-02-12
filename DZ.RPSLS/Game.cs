@@ -52,20 +52,37 @@ namespace DZ.RPSLS
             Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
         }
 
-        public void EnterPlayerOneName()
+        public string EnterPlayerOneName()
         {
             Console.WriteLine("Player One: Enter Your Name");
+            string playerOneInput = Console.ReadLine();
+            Console.WriteLine("Player One Name is:" + playerOneInput);
+
+            return playerOneInput;
         }
 
-        public void EnterPlayerTwoName()
+        public string EnterPlayerTwoName()
         {
             Console.WriteLine("Player Two: Enter Your Name");
+            string playerTwoInput = Console.ReadLine();
+            Console.WriteLine("Player Two Name is:" + playerTwoInput);
+
+            return playerTwoInput;
+
+        }
+
+        public void ()
+        {
             
         }
 
         public void DisplayGesture()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
+            for (int i = 0; i < length; i++)
+            {
+
+            }
 
         }
 

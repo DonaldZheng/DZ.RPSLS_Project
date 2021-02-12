@@ -23,6 +23,12 @@ namespace DZ.RPSLS
             gestures.Add("Scissor");
             gestures.Add("Lizard");
             gestures.Add("Spock");
+
+            //string rock = "rock";
+            //string paper = "Paper";
+            //string scissor = "Scissor";
+            //string lizard = "Lizard";
+            //string spock = "Spock";
         }
 
         //member methods (CAN DO)
