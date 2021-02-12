@@ -9,8 +9,8 @@ namespace DZ.RPSLS
     class Game
     {
         //member variables (HAS A)
-        Player playerOne;
-        Player playerTwo;
+        Player playerOneScore;
+        Player playerTwoScore;
 
         //constructor
         public Game()
@@ -71,19 +71,25 @@ namespace DZ.RPSLS
 
         }
 
-        public void ()
-        {
-            
-        }
-
         public void DisplayGesture()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
-            for (int i = 0; i < length; i++)
+            
+        }
+        public void DisplayWinner()
+        {
+            if (playerOneScore.score == 3)
             {
-
+                Console.WriteLine("Player One Wins!")                                                                             );
             }
-
+            else if (playerOneScore.score == 3)
+            {
+                Console.WriteLine("Player Two Wins!");            
+            }
+            else
+            {
+                Console.WriteLine("Winner has not been determined yet" );
+            }
         }
 
 
