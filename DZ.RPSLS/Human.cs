@@ -18,6 +18,12 @@ namespace DZ.RPSLS
             this.gestureChoice = gestureChoice;
         }
 
+        public override void PlayerChoice()
+        {
+            Console.WriteLine("Rock");
+        }
+
         //member methods (CAN DO)
+
     }
 }

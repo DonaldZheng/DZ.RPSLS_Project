@@ -19,10 +19,18 @@ namespace DZ.RPSLS
             score = 0;
         }
 
+        
+
         //member methods (CAN DO)
-        public void RandomNumberGenerator()
+        public int RandomNumberGenerator()
         {
-            Console.WriteLine("AI picked...." );
+            int randomGesture = int32.Parse
+            return random.Next(gestures);
+
+        }
+        public override void PlayerChoice()
+        {
+
         }
     }
 }

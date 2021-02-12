@@ -19,6 +19,13 @@ namespace DZ.RPSLS
         }
 
         //member methods (CAN DO)
+
+        public void RunGame()
+        {
+            Welcome();
+            DisplayRules();
+        }
+
         public void Welcome()
         {
             Console.WriteLine("Welcome to RPSLS!");
@@ -40,17 +47,25 @@ namespace DZ.RPSLS
             Console.WriteLine("Spock vaporizes Rock");
         }
 
-        public void PlayerOneName()
+        public void SelectGameMode()
         {
-            Console.WriteLine("Player One: Enter Your name" );
-            string userInputPlayerOne = Console.ReadLine();
-            PlayerOne.
+            Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
         }
 
-        public void PlayerTwoName()
+        public void EnterPlayerOneName()
         {
-            Console.WriteLine("Player Two: Enter Your Name!");
-            string userInputPlayerTwo = Console.ReadLine();
+            Console.WriteLine("Player One: Enter Your Name");
+        }
+
+        public void EnterPlayerTwoName()
+        {
+            Console.WriteLine("Player Two: Enter Your Name");
+            
+        }
+
+        public void DisplayGesture()
+        {
+            Console.WriteLine("Pick the Gesture you would like to use:");
 
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    public class Player
+    public abstract class Player
     {
         //member variables (HAS A)
         public string name;
@@ -18,13 +18,15 @@ namespace DZ.RPSLS
         public Player()
         {
             gestures = new List<string>();
-            
+            gestures.Add("Rock");
+            gestures.Add("Paper");
+            gestures.Add("Scissor");
+            gestures.Add("Lizard");
+            gestures.Add("Spock");
         }
 
         //member methods (CAN DO)
-        public void PlayerChoice()
-        {
+        public abstract void PlayerChoice();
         
-        }
     }
 }
