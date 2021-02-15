@@ -32,7 +32,7 @@ namespace DZ.RPSLS
         }
 
         //member methods (CAN DO)
-        public abstract string PlayerChoice();
+        public abstract void PlayerChoice();
         
         
     }

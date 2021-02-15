@@ -9,6 +9,7 @@ namespace DZ.RPSLS
     class Program
     {
         static void Main(string[] args)
+        
         {
             Game battlefield = new Game();
             battlefield.RunGame();

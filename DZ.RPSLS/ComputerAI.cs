@@ -22,13 +22,19 @@ namespace DZ.RPSLS
 
 
         //member methods (CAN DO)
-        public override string PlayerChoice()
+        public override void PlayerChoice()
         {
             int randomChoice = random.Next(gestures.Count);
             Console.WriteLine("AI has played" + gestures[randomChoice]);
             string aiChoice = randomChoice.ToString();
 
-            return gestures[randomChoice];
+            //return gestures[randomChoice];
+
+            //    int aiChoice;
+            //    Random random = new Random();
+            //    aiChoice = random.Next();
+            //    switch (aiChoice)
+            
 
         }
     }

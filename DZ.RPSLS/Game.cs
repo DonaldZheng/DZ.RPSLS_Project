@@ -13,8 +13,8 @@ namespace DZ.RPSLS
         Player player2;
         Player playerOneScore;
         Player playerTwoScore;
- 
-        
+
+
 
         //constructor
         public Game()
@@ -30,6 +30,16 @@ namespace DZ.RPSLS
             DisplayRules();
             SelectGameMode();
             ShowOptions();
+
+            while (player1.score < 3 && player2.score < 3)
+            {
+                Human gesture = new Human();
+                gesture.PlayerChoice();
+
+                ComputerAI aiGesture = new ComputerAI();
+                aiGesture.PlayerChoice();
+
+            }
         }
 
         public void Welcome()
@@ -56,7 +66,7 @@ namespace DZ.RPSLS
 
         public void SelectGameMode()
         {
-            Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
+            Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer");
             string userInputGameMode = Console.ReadLine();
 
             if (userInputGameMode == "1")
@@ -65,7 +75,7 @@ namespace DZ.RPSLS
                 player1.name = EnterPlayerOneName();
                 player2 = new ComputerAI();
             }
-            else 
+            else
             {
                 player1 = new Human();
                 player2 = new Human();
@@ -95,38 +105,27 @@ namespace DZ.RPSLS
 
         public string ShowOptions()
         {
-            Console.WriteLine("Pick the Gesture you would like to use:");
-            Console.WriteLine("1: Rock");
-            Console.WriteLine("2: Paper");
-            Console.WriteLine("3: Scissors");
-            Console.WriteLine("4: Lizard");
-            Console.WriteLine("5: Spock");
+            Console.WriteLine("Here are all the gestures you can use");
+            Console.WriteLine("Rock");
+            Console.WriteLine("Paper");
+            Console.WriteLine("Scissors");
+            Console.WriteLine("Lizard");
+            Console.WriteLine("Spock");
             return Console.ReadLine();
             // use for loop or maybe switch case??           
-            }
-
-        //public void AIThrow()
-        //{
-        //    int aiChoice;
-        //    Random random = new Random();
-        //    aiChoice = random.Next(0, 5);
-        //    switch (aiChoice)
-        //    {
-        //    }
-
-
-        //}
-
+        }
 
         public void CompareGesture()
         {
-            if (player1.gestureChoice. == "0" && player2.gestureChoice == "2")
+            if (player1.gestureChoice == "0" && player2.gestureChoice == "2")
             {
                 Console.WriteLine("Rock Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "0" && player2.gestureChoice == "3")
             {
                 Console.WriteLine(" Rock Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "0" && player2.gestureChoice == "0")
             {
@@ -135,10 +134,12 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "1" && player2.gestureChoice == "0")
             {
                 Console.WriteLine(" Paper Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "1" && player2.gestureChoice == "4")
             {
                 Console.WriteLine(" Paper Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "1" && player2.gestureChoice == "1")
             {
@@ -147,23 +148,28 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "2" && player2.gestureChoice == "1")
             {
                 Console.WriteLine(" Scissors Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "2" && player2.gestureChoice == "3")
             {
                 Console.WriteLine(" Scissors Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "2" && player2.gestureChoice == "2")
             {
                 Console.WriteLine(" It's a draw!");
+               
             }
 
             if (player1.gestureChoice == "3" && player2.gestureChoice == "4")
             {
                 Console.WriteLine(" Lizard Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "3" && player2.gestureChoice == "1")
             {
                 Console.WriteLine(" Lizard Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "3" && player2.gestureChoice == "3")
             {
@@ -172,16 +178,95 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "4" && player2.gestureChoice == "2")
             {
                 Console.WriteLine(" Spock Wins!");
+                player1.score++;
             }
 
             if (player1.gestureChoice == "4" && player2.gestureChoice == "0")
             {
                 Console.WriteLine(" Spock Wins!");
+                player1.score++;
             }
             if (player1.gestureChoice == "4" && player2.gestureChoice == "4")
             {
                 Console.WriteLine(" It's a draw!");
             }
+
+            // now player 2
+            if (player2.gestureChoice == "0" && player1.gestureChoice == "2")
+            {
+                Console.WriteLine("Rock Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "0" && player1.gestureChoice == "3")
+            {
+                Console.WriteLine(" Rock Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "0" && player1.gestureChoice == "0")
+            {
+                Console.WriteLine(" It's a draw!");
+            }
+            if (player2.gestureChoice == "1" && player1.gestureChoice == "0")
+            {
+                Console.WriteLine(" Paper Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "1" && player1.gestureChoice == "4")
+            {
+                Console.WriteLine(" Paper Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "1" && player1.gestureChoice == "1")
+            {
+                Console.WriteLine(" It's a draw!");
+            }
+            if (player1.gestureChoice == "2" && player1.gestureChoice == "1")
+            {
+                Console.WriteLine(" Scissors Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "2" && player1.gestureChoice == "3")
+            {
+                Console.WriteLine(" Scissors Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "2" && player1.gestureChoice == "2")
+            {
+                Console.WriteLine(" It's a draw!");
+
+            }
+
+            if (player2.gestureChoice == "3" && player1.gestureChoice == "4")
+            {
+                Console.WriteLine(" Lizard Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "3" && player1.gestureChoice == "1")
+            {
+                Console.WriteLine(" Lizard Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "3" && player1.gestureChoice == "3")
+            {
+                Console.WriteLine(" It's a draw!");
+            }
+            if (player2.gestureChoice == "4" && player1.gestureChoice == "2")
+            {
+                Console.WriteLine(" Spock Wins!");
+                player2.score++;
+            }
+
+            if (player2.gestureChoice == "4" && player1.gestureChoice == "0")
+            {
+                Console.WriteLine(" Spock Wins!");
+                player2.score++;
+            }
+            if (player2.gestureChoice == "4" && player1.gestureChoice == "4")
+            {
+                Console.WriteLine(" It's a draw!");
+            }
+
+
 
         }
 
@@ -192,11 +277,11 @@ namespace DZ.RPSLS
         
         public void DisplayWinner()
         {
-            if (playerOneScore.score == 3)
+            if (player1.score == 3)
             {
                 Console.WriteLine("Player One Wins!");
             }
-            else if (playerOneScore.score == 3)
+            else if (player2.score == 3)
             {
                 Console.WriteLine("Player Two Wins!");            
             }
