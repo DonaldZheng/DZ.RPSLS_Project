@@ -29,7 +29,7 @@ namespace DZ.RPSLS
             Welcome();
             DisplayRules();
             SelectGameMode();
-            Options();
+            ShowOptions();
         }
 
         public void Welcome()
@@ -57,17 +57,20 @@ namespace DZ.RPSLS
         public void SelectGameMode()
         {
             Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
-            int userInputGameMode = Convert.ToInt32(Console.ReadLine());
+            string userInputGameMode = Console.ReadLine();
 
-            if (userInputGameMode == 1)
+            if (userInputGameMode == "1")
             {
-                EnterPlayerOneName();
+                player1 = new Human();
+                player1.name = EnterPlayerOneName();
                 player2 = new ComputerAI();
             }
             else 
             {
-                EnterPlayerOneName();
-                EnterPlayerTwoName();
+                player1 = new Human();
+                player2 = new Human();
+                player1.name = EnterPlayerOneName();
+                player2.name = EnterPlayerTwoName();
             }
         }
 
@@ -90,7 +93,7 @@ namespace DZ.RPSLS
 
         }
 
-        public string Options()
+        public string ShowOptions()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
             Console.WriteLine("1: Rock");
@@ -102,26 +105,22 @@ namespace DZ.RPSLS
             // use for loop or maybe switch case??           
             }
 
-        public void AIThrow()
-        {
-            int aiChoice;
-            Random random = new Random();
-            aiChoice = random.Next(0, 5);
-            switch (aiChoice)
-            {
-
-               
-                
-
-            }
+        //public void AIThrow()
+        //{
+        //    int aiChoice;
+        //    Random random = new Random();
+        //    aiChoice = random.Next(0, 5);
+        //    switch (aiChoice)
+        //    {
+        //    }
 
             
-        }
+        //}
        
 
         public void CompareGesture()
         {
-        
+        if ()
         }
 
 

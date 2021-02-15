@@ -18,12 +18,19 @@ namespace DZ.RPSLS
             //this.gestureChoice = gestureChoice;
         }
 
-        public override void PlayerChoice()
-        {
-            
-        }
+
 
         //member methods (CAN DO)
+        public override void PlayerChoice()
+        {
+            Console.WriteLine("Pick the choice you would like to use:");
+            for (int i = 0; i < gestures.Count; i++)
+            {
+                Console.WriteLine("Press " + i + " for " + gestures[i]);
+            }
+            string userInput = Console.ReadLine();
+            int chosenGesture = Int32.Parse(userInput);
+        }
 
     }
 }
