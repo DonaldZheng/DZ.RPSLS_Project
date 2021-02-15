@@ -22,10 +22,12 @@ namespace DZ.RPSLS
         
 
         //member methods (CAN DO)
-        public int RandomNumberGenerator()
+        public void RandomNumberGenerator()
         {
-            int randomGesture = int32.Parse
-            return random.Next(gestures);
+            for (int i = 0; i < gestures.Count; i++)
+            {
+                Console.WriteLine("Enter " + i + "for " + gestures[i]);
+            }
 
         }
         public override void PlayerChoice()

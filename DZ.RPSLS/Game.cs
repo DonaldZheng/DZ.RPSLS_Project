@@ -50,6 +50,21 @@ namespace DZ.RPSLS
         public void SelectGameMode()
         {
             Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
+            int userInputGameMode = Convert.ToInt32(Console.ReadLine());
+            string playerOneName = EnterPlayerOneName();
+            playerOneName = new Human(playerOneName);
+
+            if (userInputGameMode == 1)
+            {
+                EnterPlayerOneName();
+                
+            }
+
+            else 
+            {
+                EnterPlayerOneName();
+                EnterPlayerTwoName();
+            }
         }
 
         public string EnterPlayerOneName()
@@ -105,7 +120,20 @@ namespace DZ.RPSLS
 
         }
 
+        public void CompareGesture()
+        {
+        
+        }
 
+        public void WhichGestureWins()
+        {
+        
+        }
+
+        public void CurrentScore()
+        {
+
+        }
         
         public void DisplayWinner()
         {
