@@ -11,15 +11,16 @@ namespace DZ.RPSLS
         //member variables (HAS A)
         Player player1;
         Player player2;
-        Player playerOneScore;
-        Player playerTwoScore;
+        public int playerOneScore;
+        public int playerTwoScore;
 
 
 
         //constructor
         public Game()
         {
-
+            playerOneScore = 0;
+            playerTwoScore = 0;
         }
 
         //member methods (CAN DO)
@@ -31,17 +32,21 @@ namespace DZ.RPSLS
             SelectGameMode();
             ShowOptions();
 
+            Human gesture = new Human();
+            gesture.PlayerChoice();
+
+            ComputerAI aiGesture = new ComputerAI();
+            aiGesture.PlayerChoice();
+
             while (player1.score < 3 && player2.score < 3)
             {
-                Human gesture = new Human();
-                gesture.PlayerChoice();
-
-                ComputerAI aiGesture = new ComputerAI();
-                aiGesture.PlayerChoice();
-
+                CompareGesture();
             }
+
+            DisplayWinner();
         }
 
+    
         public void Welcome()
         {
             Console.WriteLine("Welcome to RPSLS!");
@@ -117,151 +122,151 @@ namespace DZ.RPSLS
 
         public void CompareGesture()
         {
-            if (player1.gestureChoice == "0" && player2.gestureChoice == "2")
+            if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine("Rock Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "0" && player2.gestureChoice == "3")
+            if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Rock Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "0" && player2.gestureChoice == "0")
+            if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Rock")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player1.gestureChoice == "1" && player2.gestureChoice == "0")
+            if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Paper Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "1" && player2.gestureChoice == "4")
+            if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Paper Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "1" && player2.gestureChoice == "1")
+            if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Paper")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player1.gestureChoice == "2" && player2.gestureChoice == "1")
+            if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Scissors Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "2" && player2.gestureChoice == "3")
+            if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Scissors Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "2" && player2.gestureChoice == "2")
+            if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" It's a draw!");
                
             }
 
-            if (player1.gestureChoice == "3" && player2.gestureChoice == "4")
+            if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Lizard Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "3" && player2.gestureChoice == "1")
+            if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Lizard Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "3" && player2.gestureChoice == "3")
+            if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player1.gestureChoice == "4" && player2.gestureChoice == "2")
+            if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Spock Wins!");
                 player1.score++;
             }
 
-            if (player1.gestureChoice == "4" && player2.gestureChoice == "0")
+            if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Spock Wins!");
                 player1.score++;
             }
-            if (player1.gestureChoice == "4" && player2.gestureChoice == "4")
+            if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Spock")
             {
                 Console.WriteLine(" It's a draw!");
             }
 
             // now player 2
-            if (player2.gestureChoice == "0" && player1.gestureChoice == "2")
+            if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Scissors")
             {
                 Console.WriteLine("Rock Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "0" && player1.gestureChoice == "3")
+            if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Rock Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "0" && player1.gestureChoice == "0")
+            if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Rock")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player2.gestureChoice == "1" && player1.gestureChoice == "0")
+            if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Paper Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "1" && player1.gestureChoice == "4")
+            if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Paper Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "1" && player1.gestureChoice == "1")
+            if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Paper")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player1.gestureChoice == "2" && player1.gestureChoice == "1")
+            if (player1.gestureChoice == "Scissors" && player1.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Scissors Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "2" && player1.gestureChoice == "3")
+            if (player2.gestureChoice == "Scissors" && player1.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Scissors Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "2" && player1.gestureChoice == "2")
+            if (player2.gestureChoice == "Scissors" && player1.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" It's a draw!");
 
             }
 
-            if (player2.gestureChoice == "3" && player1.gestureChoice == "4")
+            if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Lizard Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "3" && player1.gestureChoice == "1")
+            if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Lizard Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "3" && player1.gestureChoice == "3")
+            if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" It's a draw!");
             }
-            if (player2.gestureChoice == "4" && player1.gestureChoice == "2")
+            if (player2.gestureChoice == "Spock" && player1.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Spock Wins!");
                 player2.score++;
             }
 
-            if (player2.gestureChoice == "4" && player1.gestureChoice == "0")
+            if (player2.gestureChoice == "Spock" && player1.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Spock Wins!");
                 player2.score++;
             }
-            if (player2.gestureChoice == "4" && player1.gestureChoice == "4")
+            if (player2.gestureChoice == "Spock" && player1.gestureChoice == "Spock")
             {
                 Console.WriteLine(" It's a draw!");
             }
@@ -277,11 +282,11 @@ namespace DZ.RPSLS
         
         public void DisplayWinner()
         {
-            if (player1.score == 3)
+            if (player1.score <= 3)
             {
                 Console.WriteLine("Player One Wins!");
             }
-            else if (player2.score == 3)
+            else if (player2.score <= 3)
             {
                 Console.WriteLine("Player Two Wins!");            
             }
