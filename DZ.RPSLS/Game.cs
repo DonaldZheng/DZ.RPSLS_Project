@@ -114,20 +114,52 @@ namespace DZ.RPSLS
         //    {
         //    }
 
-            
+
         //}
-       
+
 
         public void CompareGesture()
         {
-        if ()
-        }
-
-
-
-        public void WhichGestureWins()
-        {
-        
+            if (player1.gestureChoice == "1" && player2.gestureChoice == "3")
+            {
+                Console.WriteLine("Rock Wins!");
+            }
+            if (player1.gestureChoice == "3" && player2.gestureChoice == "2")
+            {
+                Console.WriteLine(" Scissors Wins!");
+            }
+            if (player1.gestureChoice == "2" && player2.gestureChoice == "1")
+            {
+                Console.WriteLine(" Paper Wins!");
+            }
+            if (player1.gestureChoice == "1" && player2.gestureChoice == "4")
+            {
+                Console.WriteLine(" Rock Wins!");
+            }
+            if (player1.gestureChoice == "4" && player2.gestureChoice == "5")
+            {
+                Console.WriteLine(" Lizard Wins!");
+            }
+            if (player1.gestureChoice == "5" && player2.gestureChoice == "3")
+            {
+                Console.WriteLine(" Spock Wins!");
+            }
+            if (player1.gestureChoice == "3" && player2.gestureChoice == "4")
+            {
+                Console.WriteLine(" Scissors Wins!");
+            }
+            if (player1.gestureChoice == "4" && player2.gestureChoice == "2")
+            {
+                Console.WriteLine(" Lizard Wins!");
+            }
+            if (player1.gestureChoice == "2" && player2.gestureChoice == "5")
+            {
+                Console.WriteLine(" Paper Wins!");
+            }
+            if (player1.gestureChoice == "5" && player2.gestureChoice == "1")
+            {
+                Console.WriteLine(" Spock Wins!");
+            }
 
         }
 
