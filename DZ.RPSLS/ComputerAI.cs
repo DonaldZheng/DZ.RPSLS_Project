@@ -12,10 +12,10 @@ namespace DZ.RPSLS
         Random random; //random number generator 
 
         //constructor
-        public ComputerAI(string name, int score, string gestureChoice)
+        public ComputerAI() //string name, int score, string gestureChoice
         {
             Random random = new Random();
-            this.name = "AI";
+            //this.name = "AI";
             score = 0;
         }
 
@@ -24,10 +24,10 @@ namespace DZ.RPSLS
         //member methods (CAN DO)
         public void RandomNumberGenerator()
         {
-            for (int i = 0; i < gestures.Count; i++)
-            {
-                Console.WriteLine("Enter " + i + "for " + gestures[i]);
-            }
+            //for (int i = 0; i < gestures.Count; i++)
+            //{
+            //    Console.WriteLine("Enter " + i + "for " + gestures[i]);
+            //}
 
         }
         public override void PlayerChoice()

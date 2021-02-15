@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace DZ.RPSLS
 {
-    class Game
+    public class Game
     {
         //member variables (HAS A)
+        Player player1;
+        Player player2;
         Player playerOneScore;
         Player playerTwoScore;
+ 
+        
 
         //constructor
         public Game()
@@ -24,6 +28,8 @@ namespace DZ.RPSLS
         {
             Welcome();
             DisplayRules();
+            SelectGameMode();
+            Options();
         }
 
         public void Welcome()
@@ -34,7 +40,8 @@ namespace DZ.RPSLS
         public void DisplayRules()
         {
             Console.WriteLine("You will choose Rock, Paper, Scissors, Lizard, or Spock. " +
-                "First to 3 Points will be declared the winner. Each rounds is worth one point");
+                "First to 3 Points will be declared the winner. Each rounds is worth one point.");
+            Console.WriteLine("Rules: ");
             Console.WriteLine("Rock crushes Scissors");
             Console.WriteLine("Scissors cuts Paper");
             Console.WriteLine("Paper covers Rock");
@@ -51,15 +58,12 @@ namespace DZ.RPSLS
         {
             Console.WriteLine("Press 1 to start Single Player or Press 2 to start Multiplayer" );
             int userInputGameMode = Convert.ToInt32(Console.ReadLine());
-            string playerOneName = EnterPlayerOneName();
-            playerOneName = new Human(playerOneName);
 
             if (userInputGameMode == 1)
             {
                 EnterPlayerOneName();
-                
+                player2 = new ComputerAI();
             }
-
             else 
             {
                 EnterPlayerOneName();
@@ -86,7 +90,7 @@ namespace DZ.RPSLS
 
         }
 
-        public int DisplayGesture()
+        public string Options()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
             Console.WriteLine("1: Rock");
@@ -94,45 +98,43 @@ namespace DZ.RPSLS
             Console.WriteLine("3: Scissors");
             Console.WriteLine("4: Lizard");
             Console.WriteLine("5: Spock");
-            int pickGesture = Convert.ToInt32(Console.ReadLine());
-            return pickGesture;
-            // use for loop or maybe switch case??
-            switch (pickGesture)
-            {
-                case "1":
-                    Console.WriteLine("You have chosen Rock");
-                    break;
-                case "2":
-                    Console.WriteLine("You have chosen Paper");
-                case "3":
-                    Console.WriteLine("You have chosen Scissors");
-                    break;
-                case "4":
-                    Console.WriteLine("You have chosen Lizard");
-                    break;
-                case "5":
-                    Console.WriteLine("You have chosen Spock");
-                    break;
-                default:
-                    Console.WriteLine("Not a valid Gesture to choose");
-                    break;
+            return Console.ReadLine();
+            // use for loop or maybe switch case??           
             }
 
+        public void AIThrow()
+        {
+            int aiChoice;
+            Random random = new Random();
+            aiChoice = random.Next(0, 5);
+            switch (aiChoice)
+            {
+
+               
+                
+
+            }
+
+            
         }
+       
 
         public void CompareGesture()
         {
         
         }
 
+
+
         public void WhichGestureWins()
         {
         
+
         }
 
         public void CurrentScore()
         {
-
+            Console.WriteLine("{0}, {1}");
         }
         
         public void DisplayWinner()

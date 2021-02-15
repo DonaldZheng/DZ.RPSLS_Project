@@ -11,16 +11,16 @@ namespace DZ.RPSLS
         //member variables (HAS A)
 
         //constructor
-        public Human(string name, int score, string gestureChoice)
+        public Human()
         {
-            this.name = "Donald";
+            //this.name = "Donald";
             score = 0;
-            this.gestureChoice = gestureChoice;
+            //this.gestureChoice = gestureChoice;
         }
 
         public override void PlayerChoice()
         {
-            Console.WriteLine("Rock");
+            
         }
 
         //member methods (CAN DO)

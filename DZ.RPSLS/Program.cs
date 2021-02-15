@@ -11,7 +11,7 @@ namespace DZ.RPSLS
         static void Main(string[] args)
         {
             Game battlefield = new Game();
-            battlefield.DisplayRules();
+            battlefield.RunGame();
             Console.ReadLine();
         }
     }
