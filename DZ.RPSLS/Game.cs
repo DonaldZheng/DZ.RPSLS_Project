@@ -74,13 +74,21 @@ namespace DZ.RPSLS
         public void DisplayGesture()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
-            
+            Console.WriteLine("1: Rock");
+            Console.WriteLine("2: Paper");
+            Console.WriteLine("3: Scissors");
+            Console.WriteLine("4: Lizard");
+            Console.WriteLine("5: Spock");
+
+
         }
+
+        
         public void DisplayWinner()
         {
             if (playerOneScore.score == 3)
             {
-                Console.WriteLine("Player One Wins!")                                                                             );
+                Console.WriteLine("Player One Wins!");
             }
             else if (playerOneScore.score == 3)
             {
@@ -88,7 +96,7 @@ namespace DZ.RPSLS
             }
             else
             {
-                Console.WriteLine("Winner has not been determined yet" );
+                Console.WriteLine("Winner has not been determined yet");
             }
         }
 
