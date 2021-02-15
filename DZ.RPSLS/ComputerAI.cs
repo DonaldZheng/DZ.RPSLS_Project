@@ -15,7 +15,7 @@ namespace DZ.RPSLS
         public ComputerAI() //string name, int score, string gestureChoice
         {
             Random random = new Random();
-            //this.name = "AI";
+            this.name = "AI";
             score = 0;
         }
 
