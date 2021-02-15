@@ -71,7 +71,7 @@ namespace DZ.RPSLS
 
         }
 
-        public void DisplayGesture()
+        public int DisplayGesture()
         {
             Console.WriteLine("Pick the Gesture you would like to use:");
             Console.WriteLine("1: Rock");
@@ -79,9 +79,32 @@ namespace DZ.RPSLS
             Console.WriteLine("3: Scissors");
             Console.WriteLine("4: Lizard");
             Console.WriteLine("5: Spock");
-
+            int pickGesture = Convert.ToInt32(Console.ReadLine());
+            return pickGesture;
+            // use for loop or maybe switch case??
+            switch (pickGesture)
+            {
+                case "1":
+                    Console.WriteLine("You have chosen Rock");
+                    break;
+                case "2":
+                    Console.WriteLine("You have chosen Paper");
+                case "3":
+                    Console.WriteLine("You have chosen Scissors");
+                    break;
+                case "4":
+                    Console.WriteLine("You have chosen Lizard");
+                    break;
+                case "5":
+                    Console.WriteLine("You have chosen Spock");
+                    break;
+                default:
+                    Console.WriteLine("Not a valid Gesture to choose");
+                    break;
+            }
 
         }
+
 
         
         public void DisplayWinner()
