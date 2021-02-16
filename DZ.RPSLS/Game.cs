@@ -9,8 +9,8 @@ namespace DZ.RPSLS
     public class Game
     {
         //member variables (HAS A)
-        Player player1;
-        Player player2;
+        public Player player1;
+        public Player player2;
         public int playerOneScore;
         public int playerTwoScore;
 
@@ -30,20 +30,14 @@ namespace DZ.RPSLS
             Welcome();
             DisplayRules();
             SelectGameMode();
-            ShowOptions();
-
-            Human gesture = new Human();
-            gesture.PlayerChoice();
-
-            ComputerAI aiGesture = new ComputerAI();
-            aiGesture.PlayerChoice();
-
-            while (player1.score < 3 && player2.score < 3)
+            while (playerOneScore <= 3 && playerTwoScore <= 3)
             {
-                CompareGesture();
+              CompareGesture();
             }
 
             DisplayWinner();
+            PlayAgain();
+            Console.ReadLine();
         }
 
     
@@ -122,15 +116,18 @@ namespace DZ.RPSLS
 
         public void CompareGesture()
         {
+            player1.PlayerChoice();
+            player2.PlayerChoice();
+
             if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine("Rock Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Rock Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Rock" && player2.gestureChoice == "Rock")
             {
@@ -139,12 +136,12 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Paper Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Paper Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Paper" && player2.gestureChoice == "Paper")
             {
@@ -153,12 +150,12 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Scissors Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Scissors Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Scissors" && player2.gestureChoice == "Scissors")
             {
@@ -169,12 +166,12 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Lizard Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Lizard Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Lizard" && player2.gestureChoice == "Lizard")
             {
@@ -183,13 +180,13 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Spock Wins!");
-                player1.score++;
+                playerOneScore++;
             }
 
             if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Spock Wins!");
-                player1.score++;
+                playerOneScore++;
             }
             if (player1.gestureChoice == "Spock" && player2.gestureChoice == "Spock")
             {
@@ -200,12 +197,12 @@ namespace DZ.RPSLS
             if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Scissors")
             {
                 Console.WriteLine("Rock Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Rock Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Rock" && player1.gestureChoice == "Rock")
             {
@@ -214,12 +211,12 @@ namespace DZ.RPSLS
             if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Rock")
             {
                 Console.WriteLine(" Paper Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Paper Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Paper" && player1.gestureChoice == "Paper")
             {
@@ -228,12 +225,12 @@ namespace DZ.RPSLS
             if (player1.gestureChoice == "Scissors" && player1.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Scissors Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Scissors" && player1.gestureChoice == "Lizard")
             {
                 Console.WriteLine(" Scissors Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Scissors" && player1.gestureChoice == "Scissors")
             {
@@ -244,12 +241,12 @@ namespace DZ.RPSLS
             if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Spock")
             {
                 Console.WriteLine(" Lizard Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Paper")
             {
                 Console.WriteLine(" Lizard Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
             if (player2.gestureChoice == "Lizard" && player1.gestureChoice == "Lizard")
             {
@@ -258,7 +255,7 @@ namespace DZ.RPSLS
             if (player2.gestureChoice == "Spock" && player1.gestureChoice == "Scissors")
             {
                 Console.WriteLine(" Spock Wins!");
-                player2.score++;
+                playerTwoScore++;
             }
 
             if (player2.gestureChoice == "Spock" && player1.gestureChoice == "Rock")
@@ -275,11 +272,7 @@ namespace DZ.RPSLS
 
         }
 
-        public void CurrentScore()
-        {
-            Console.WriteLine("{0}, {1}");
-        }
-        
+
         public void DisplayWinner()
         {
             if (player1.score <= 3)
@@ -288,14 +281,33 @@ namespace DZ.RPSLS
             }
             else if (player2.score <= 3)
             {
-                Console.WriteLine("Player Two Wins!");            
+                Console.WriteLine("Player Two Wins!");
             }
             else
             {
                 Console.WriteLine("Winner has not been determined yet");
             }
-        }
 
+        }
+        public void PlayAgain()
+        {
+            Console.WriteLine("Would you like to play another game? Press 1 to Run Again. Press 2 to End Game");
+            int userInput = Convert.ToInt32(Console.ReadLine());
+
+            if (userInput == 1)
+            {
+                RunGame();
+            }
+
+            else if (userInput == 2)
+            {
+                Console.WriteLine("Thank you for playing!");
+            }
+        }
+                
+            
+        }
+          
 
 
     }

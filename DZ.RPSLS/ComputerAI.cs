@@ -14,7 +14,7 @@ namespace DZ.RPSLS
         //constructor
         public ComputerAI() //string name, int score, string gestureChoice
         {
-            Random random = new Random();
+            random = new Random();
             this.name = "AI";
             score = 0;
         }
@@ -26,8 +26,12 @@ namespace DZ.RPSLS
         {
 
 
-            //int randomChoice = random.Next(gestures.Count);
-            //Console.WriteLine("AI has played" + gestures[randomChoice]);
+            int randomChoice = random.Next(gestures.Count);
+            Console.WriteLine("AI has played" + gestures[randomChoice]);
+            gestureChoice = gestures[randomChoice];
+
+           
+
             //string aiChoice = randomChoice.ToString();
 
             //return gestures[randomChoice];
@@ -36,7 +40,7 @@ namespace DZ.RPSLS
             //    Random random = new Random();
             //    aiChoice = random.Next();
             //    switch (aiChoice)
-            
+
 
         }
     }
