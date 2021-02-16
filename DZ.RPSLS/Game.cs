@@ -39,7 +39,7 @@ namespace DZ.RPSLS
             }
 
             DisplayWinner();
-            PlayAgain();
+            EndGame();
         }
 
 
@@ -359,19 +359,9 @@ namespace DZ.RPSLS
             }
 
         }
-        public void PlayAgain()
+        public void EndGame()
         {
-            Console.WriteLine("Would you like to play another game? Press 1 to Run Again. Press 2 to End Game");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-
-            if (userInput == 1)
-            {
-                SelectGameMode();
-            }
-
-
-
-
+            Console.WriteLine("Thank you for playing RPSLS");
         }
 
     }  
