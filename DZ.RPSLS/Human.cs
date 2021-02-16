@@ -28,8 +28,14 @@ namespace DZ.RPSLS
             {
                 Console.WriteLine("Press " + i + " for " + gestures[i]);
             }
+            //string userInput = Console.ReadLine();
+            //gestureChoice = userInput;
+
+            //gestureChoice = userInput;
+
             string userInput = Console.ReadLine();
-            gestureChoice = userInput;
+            int convertInput = Int32.Parse(userInput);
+            gestureChoice = gestures[convertInput];
         }
 
     }
