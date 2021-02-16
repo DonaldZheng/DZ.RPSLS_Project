@@ -26,7 +26,7 @@ namespace DZ.RPSLS
             Console.WriteLine("Pick the choice you would like to use:");
             for (int i = 0; i < gestures.Count; i++)
             {
-                Console.WriteLine("Press " + i + " for " + gestures[i]);
+                Console.WriteLine("Press " + i + " for " + gestures[i] + ".");
             }
             //string userInput = Console.ReadLine();
             //gestureChoice = userInput;

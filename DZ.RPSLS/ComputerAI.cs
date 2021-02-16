@@ -27,7 +27,7 @@ namespace DZ.RPSLS
 
 
             int randomChoice = random.Next(gestures.Count);
-            Console.WriteLine("AI has played" + gestures[randomChoice]);
+            Console.WriteLine("AI has played " + gestures[randomChoice]);
             gestureChoice = gestures[randomChoice];
 
            
